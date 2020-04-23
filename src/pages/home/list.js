@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import firebase from "../../services/firebase";
-import { Table, Dimmer, Loader, Button, Icon } from "semantic-ui-react";
+import { Table, Dimmer, Loader, Button, Popup } from "semantic-ui-react";
 
 function List() {
   const [carregando, setCarregando] = useState(true);
@@ -26,9 +26,9 @@ function List() {
         <Table celled>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Codigo</Table.HeaderCell>
+              <Table.HeaderCell width="1">Codigo</Table.HeaderCell>
               <Table.HeaderCell>Item</Table.HeaderCell>
-              <Table.HeaderCell>Quantidade</Table.HeaderCell>
+              <Table.HeaderCell width="1">Quantidade</Table.HeaderCell>
               <Table.HeaderCell>Fornecedor</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
@@ -63,20 +63,83 @@ function List() {
               <Table.Cell>100</Table.Cell>
               <Table.Cell>Samsung</Table.Cell>
             </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
+            <Table.Row>
+              <Table.Cell>000</Table.Cell>
+              <Table.Cell>Fone de ouvido</Table.Cell>
+              <Table.Cell>100</Table.Cell>
+              <Table.Cell>Samsung</Table.Cell>
+            </Table.Row>
           </Table.Body>
-          <Table.Footer fullWidth>
+          <Table.Footer fullWidth >
             <Table.Row>
               <Table.HeaderCell colSpan="4">
-                <Button
-                  floated="right"
-                  icon
-                  labelPosition="left"
-                  primary
-                  size="small"
-                >
-                  <Icon name="plus cart" /> Entrada ou saida
-                </Button>
-                <Icon link color="blue" name="plus" size="large" />
+                <Popup
+                  content="Adicionar item."
+                  position="bottom right"
+                  trigger={
+                    <Button
+                      primary
+                      icon="plus"
+                      size="small"
+                      circular
+                      floated="right"
+                    />
+                  }
+                />
+                <Popup
+                  content="Entrada ou saida de itens."
+                  position="bottom left"
+                  trigger={
+                    <Button
+                      floated="left"
+                      icon="plus cart"
+                      primary
+                      size="small"
+                    />
+                  }
+                />
               </Table.HeaderCell>
             </Table.Row>
           </Table.Footer>
