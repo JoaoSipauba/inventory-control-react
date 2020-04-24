@@ -9,7 +9,6 @@ export const FloatedGroup = styled.div`
 `;
 
 export const ListArea = styled(Segment)`
-  overflow: auto;
   min-height: 40vh;
   max-height: 68vh;
 `
